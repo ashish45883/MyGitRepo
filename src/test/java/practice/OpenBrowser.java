@@ -27,4 +27,14 @@ public class OpenBrowser {
 		System.out.println("Page Title : " + driver.getTitle());
 		driver.quit();
 	}
+	
+	@Test
+	public void launchBrowser_3() {
+		WebDriver driver = new ChromeDriver();	
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+		driver.get("https://www.google.com/");
+		System.out.println("Page Title : " + driver.getTitle());
+		driver.quit();
+	}
 }
